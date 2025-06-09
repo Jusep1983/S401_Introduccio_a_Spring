@@ -115,13 +115,16 @@ gradle bootRun
    git clone https://github.com/Jusep1983/S401_Introduccio_a_Spring.git
    cd S401_Introduccio_a_Spring
 ```
+
 2. Arrancar el proyecto Maven (Nivel 1)
 
 ```bash
 cd S04T01N01/S04T01N01
 mvn clean spring-boot:run
 ```
+
 El servidor se iniciará en http://localhost:9000
+
 
 3. Arrancar el proyecto Gradle (Nivel 2)
 
@@ -129,7 +132,9 @@ El servidor se iniciará en http://localhost:9000
 cd S04T01N02/S04T01N02
 gradle clean bootRun
 ```
+
 El servidor se iniciará en http://localhost:9001
+
 
 ## 🔧 Pruebas con Postman (Nivel 3)
 
@@ -144,12 +149,14 @@ Selecciona el entorno correspondiente en Postman (Maven o Gradle)
 Envía las alguna de las siguientes peticiones:
 
 ```bash
+# Maven (9000)
 http://localhost:9000/hello-world1?name=Jose
 http://localhost:9000/hello-world1
 http://localhost:9000/hello-world2/Jose
 http://localhost:9000/hello-world2
 http://localhost:9000/hello-world3?name=Jose&age=41
 http://localhost:9000/hello-world3
+# Gradle (9001)
 http://localhost:9001/hello-world1?name=Jose
 http://localhost:9001/hello-world1
 http://localhost:9001/hello-world2/Jose
@@ -187,3 +194,6 @@ S401_Introduccio_a_Spring
             ├── maven_environment.json
             └── gradle_environment.json
 ```
+---
+
+¡Código limpio, APIs listas y café en mano! ☕🚀
