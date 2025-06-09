@@ -115,7 +115,7 @@ gradle bootRun
    git clone https://github.com/Jusep1983/S401_Introduccio_a_Spring.git
    cd S401_Introduccio_a_Spring
 ```
-Arrancar el proyecto Maven (Nivel 1)
+2. Arrancar el proyecto Maven (Nivel 1)
 
 ```bash
 cd S04T01N01/S04T01N01
@@ -123,7 +123,7 @@ mvn clean spring-boot:run
 ```
 El servidor se iniciará en http://localhost:9000
 
-Arrancar el proyecto Gradle (Nivel 2)
+3. Arrancar el proyecto Gradle (Nivel 2)
 
 ```bash
 cd S04T01N02/S04T01N02
