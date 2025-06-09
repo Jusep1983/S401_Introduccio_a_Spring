@@ -187,4 +187,3 @@ S401_Introduccio_a_Spring
             ├── maven_environment.json
             └── gradle_environment.json
 ```
-
