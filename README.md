@@ -5,30 +5,27 @@ Primer contacto con Spring Boot, proyectos REST, gestión de dependencias con Ma
 La tarea se divide en 3 niveles (clica en la flecha ▸ para ver los detalles):
 
 <details> <summary><strong>🧱 Nivel 1: Crear una API REST con Spring Boot usando Maven</strong></summary>
-Configuración:
 
-Proyecto generado desde Spring Initializr: 
+**Configuración:**
 
-  - Puerto configurado: 9000
-  
-  - Dependencias: Spring Web, Spring Boot DevTools
-    
-Controlador: HelloWorldController.java
-    
-    /hello-world1 → @RequestParam(name = "name", defaultValue = "UNKNOWN")
-    
-    /hello-world2/{name} → @PathVariable(name = "name", required = false)
-    
-    /hello-world3?name=X&age=Y → parámetros combinados
+Proyecto generado desde Spring Initializr:
 
-Comandos Maven usados:
+- Puerto configurado: `9000`  
+- Dependencias: `Spring Web`, `Spring Boot DevTools`
 
-    mvn compile
-    mvn package
-    mvn clean
-    mvn spring-boot:run
-    
-Pruebas realizadas:
+**Controlador:** `HelloWorldController.java`
+- `/hello-world1` → `@RequestParam(name = "name", defaultValue = "UNKNOWN")`
+- `/hello-world2/{name}` → `@PathVariable(name = "name", required = false)`
+- `/hello-world3?name=X&age=Y` → parámetros combinados
+
+**Comandos Maven usados:**
+```bash
+mvn compile
+mvn package
+mvn clean
+mvn spring-boot:run
+```    
+**Pruebas realizadas:**
 
 - http://localhost:9000/hello-world1?name=Jose
 - http://localhost:9000/hello-world1
@@ -39,30 +36,29 @@ Pruebas realizadas:
     
 </details>
 <details> <summary><strong>⚙️ Nivel 2 - Crear una API REST con Spring Boot usando Gradle</strong></summary>
-Configuración:
+
+**Configuración:**
 
 Proyecto generado desde Spring Initializr:
 
-- Puerto configurado: 9001
-
+- Puerto configurado: `9001`  
 - Dependencias: Spring Web, Spring Boot DevTools
 
-Controlador: HelloWorldController.java
-  
-    /hello-world1 → @RequestParam(name = "name", defaultValue = "UNKNOWN")
-    
-    /hello-world2/{name} → @PathVariable(name = "name", required = false)
-    
-    /hello-world3?name=X&age=Y → parámetros combinados con valores por defecto
+**Controlador: `HelloWorldController.java`**
 
-Comandos Gradle usados:
+- `/hello-world1` → `@RequestParam(name = "name", defaultValue = "UNKNOWN")`  
+- `/hello-world2/{name}` → `@PathVariable(name = "name", required = false)`  
+- `/hello-world3?name=X&age=Y` → parámetros combinados con valores por defecto
 
-    gradle build
-    gradle assemble
-    gradle clean
-    gradle bootRun
+**Comandos Gradle usados:**
+```bash
+gradle build
+gradle assemble
+gradle clean
+gradle bootRun
+```
     
-Pruebas realizadas:
+**Pruebas realizadas:**
 
   - http://localhost:9001/hello-world1?name=Jose
   - http://localhost:9001/hello-world1
@@ -73,27 +69,28 @@ Pruebas realizadas:
     
 </details>
 <details> <summary><strong>🧪 Nivel 3 - Entornos en Postman</strong></summary>
-Se crearon dos entornos en Postman:
 
-Entorno Maven
+**Se crearon dos entornos en Postman:**
 
-{{server}} = http://localhost
+🔹 **Entorno Maven**
 
-{{port}} = 9000
+- `{{server}}` = `http://localhost`  
+- `{{port}}` = `9000`
 
-Entorno Gradle
+🔹 **Entorno Gradle**
 
-{{server}} = http://localhost
+- `{{server}}` = `http://localhost`  
+- `{{port}}` = `9001`
 
-{{port}} = 9001
+**Acciones realizadas:**
 
-Se exportaron ambos entornos en formato .json y se adjuntan como parte de la entrega.
-
-Se realizaron capturas de pantalla de cada entorno mostrando el uso de las variables.
+- Se exportaron ambos entornos en formato `.json` y se adjuntan como parte de la entrega.  
+- Se realizaron capturas de pantalla de cada entorno mostrando el uso de las variables.
 
 </details>
 
 ## 🛠️ Tecnologías utilizadas
+
 - Java  21.0.5
 
 - Spring Boot 3.5.0
@@ -107,6 +104,7 @@ Se realizaron capturas de pantalla de cada entorno mostrando el uso de las varia
 - IntelliJ IDE
 
 ## ✅ Requisitos previos
+
 - Tener Maven y Gradle instalados y configurados.
 
 - Tener Java 11+
@@ -115,9 +113,27 @@ Se realizaron capturas de pantalla de cada entorno mostrando el uso de las varia
 
 ## 📂 Estructura del proyecto
 
-    src
-    └── main
-        └── java
-            └── cat.itacademy.s04.t01.n01  # o n02 en Gradle
-                └── controller
-                    └── HelloWorldController.java
+```plaintext
+S401_Introduccio_a_Spring
+├── S04T01N01               # Nivel 1 - Proyecto Maven
+│   └── src
+│       └── main
+│           └── java
+│               └── cat.itacademy.s04.t01.n01
+│                   └── controller
+│                       └── HelloWorldController.java
+├── S04T01N02               # Nivel 2 - Proyecto Gradle
+│   └── S04T01N02
+│       └── src
+│           └── main
+│               └── java
+│                   └── cat.itacademy.s04.t01.n02
+│                       └── controller
+│                           └── HelloWorldController.java
+└── S04T01N03               # Nivel 3 - Entornos Postman
+    └── postman
+        └── environments
+            ├── maven_environment.json
+            └── gradle_environment.json
+```
+
