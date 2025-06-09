@@ -107,7 +107,7 @@ gradle bootRun
 
 - Tu IDE configurado para importar proyectos Maven y Gradle.
 
-## 🔧 Instalación y ejecución
+## 🔧 Instalación y ejecución de Niveles 1 y 2
 
 1. **Clonar el repositorio**
 
@@ -131,7 +131,7 @@ gradle clean bootRun
 ```
 El servidor se iniciará en http://localhost:9001
 
-Probar los endpoints con Postman (Nivel 3)
+## 🔧 Pruebas con Postman (Nivel 3)
 
 Importa los entornos:
 
@@ -141,7 +141,7 @@ Importa los entornos:
 
 Selecciona el entorno correspondiente en Postman (Maven o Gradle)
 
-Envía peticiones a:
+Envía las alguna de las siguientes peticiones:
 
 ```bash
 http://localhost:9000/hello-world1?name=Jose
